@@ -1,0 +1,33 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/functions";
+
+.about {
+  @include flex-column;
+  @include font-size($font-size-large);
+  align-items: center;
+  text-align: center;
+  gap: rem(48);
+  .about-card {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    text-align: left;
+    &__item {
+      flex: 1;
+      padding: rem(16);
+    }
+    &__img {
+      img.left {
+        border-top-right-radius: 45%;
+        border-bottom-left-radius: 45%;
+        transform: rotate(10deg);
+      }
+      img.right {
+        border-top-left-radius: 45%;
+        border-bottom-right-radius: 45%;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+}

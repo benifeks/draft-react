@@ -1,0 +1,57 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+a {
+  @include links;
+}
+
+.nav {
+  @include wrapper;
+  @include flex-between;
+  font-size: $font-size-base;
+  font-weight: 500;
+  padding: 1rem 0;
+
+  &__left-nav {
+    @include flex-between;
+    justify-content: start;
+    gap: 2rem;
+
+    &--logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: $font-family-secondary;
+      color: $text-color;
+      text-decoration: none;
+      transition: color $transition-duration $transition-timing-function;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &--personal-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+
+  &__right-nav {
+    display: flex;
+    gap: 2rem;
+
+    &--contacts {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        font-size: $font-size-xl;
+        color: $primary-color;
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

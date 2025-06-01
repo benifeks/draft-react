@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./functions";
+
+// font
+@mixin font-size($px, $base: 16) {
+  font-size: rem($px, $base);
+}
+
+@mixin neucha {
+  font-family: $font-family-secondary;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+// wrapper
+@mixin wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+// links
+@mixin links {
+  text-decoration: none;
+  color: $text-color;
+  font-weight: 500;
+  transition: color $transition-duration $transition-timing-function;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

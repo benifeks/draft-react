@@ -1,0 +1,73 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+h1 {
+  font-size: 4rem;
+}
+
+.hero {
+  @include wrapper;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $text-color;
+  line-height: 5rem;
+  overflow: hidden;
+
+  // УБИРАЕМ background-image отсюда
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(248, 249, 250, 0) 75%,
+        #f8f9fa 100%
+      ),
+      url("/assets/images/hero/hero_2.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    transform: scale(1.05);
+    z-index: 0;
+
+    //Добавляем градиентную маску
+    // Маска: фон виден до 80%, потом исчезает
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+
+    // Safari поддержка
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  // -----------------------------------------
+
+  &-content {
+    top: 0;
+    text-shadow: 0 0 4px rgba(44, 62, 80, 0.4), 0 0 8px rgba(44, 62, 80, 0.3),
+      0 0 12px rgba(44, 62, 80, 0.2);
+  }
+}

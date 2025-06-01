@@ -1,0 +1,34 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/functions";
+
+h2 {
+  @include font-size(48);
+  text-align: center;
+}
+
+h3 {
+  @include font-size(32);
+  @include neucha;
+}
+
+header {
+  background-color: $background-light;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+main {
+  @include wrapper;
+  color: $text-color;
+}
+
+section {
+  margin-bottom: rem(80);
+}
+
+.pad {
+  height: rem(30);
+}
