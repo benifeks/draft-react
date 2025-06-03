@@ -23,10 +23,12 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#skills">Навыки</a>
-          </li>
-          <li>
-            <a href="#projects">Проекты</a>
+            <a
+              href="#website-layout"
+              onClick={() => goToHomeAnchor("website-layout")}
+            >
+              Вёрстка
+            </a>
           </li>
         </ul>
       </div>
@@ -47,37 +49,6 @@ const Header = () => {
         </li>
       </ul>
     </nav>
-
-    // -----------------------
-    // <header className="header">
-    //   <nav className="nav">
-    //     <a href="/" className="logo">
-    //       <span>🏠</span>Home
-    //     </a>
-    //     <ul className="nav-links">
-    //       <li>
-    //         <a href="/lab">Лаборатория</a>
-    //       </li>
-    //       <li>
-    //         <a href="/exercises">Задачи</a>
-    //       </li>
-    //       <li>
-    //         <a href="#about" onClick={() => goToHomeAnchor("about")}>
-    //           Обо мне
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#skills">Навыки</a>
-    //       </li>
-    //       <li>
-    //         <a href="#projects">Проекты</a>
-    //       </li>
-    //       <li>
-    //         <a href="#contact">Контакты</a>
-    //       </li>
-    //     </ul>
-    //   </nav>
-    // </header>
   );
 };
 

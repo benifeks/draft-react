@@ -6,6 +6,7 @@ import Lab from "./pages/Lab/Lab";
 import Exercises from "./pages/Exercises/Exercises";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
+import WebsiteLayout from "./components/WebsiteLayout/WebsiteLayout";
 import "./styles/App.scss";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                 <>
                   <Hero />
                   <About />
+                  <WebsiteLayout />
                   {/* Другие основные секции */}
                 </>
               }

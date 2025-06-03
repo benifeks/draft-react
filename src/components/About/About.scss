@@ -2,6 +2,10 @@
 @import "../../styles/utils/mixins";
 @import "../../styles/utils/functions";
 
+p {
+  margin-bottom: rem(16);
+}
+
 .about {
   @include flex-column;
   @include font-size($font-size-large);

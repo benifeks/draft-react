@@ -1,8 +1,8 @@
 import React from "react";
-import JustYesterday from "./JustYesterday/JustYesterday";
-import NewChapter from "./NewChapter/NewChapter";
+import JustYesterday from "./JustYesterday";
+import NewChapter from "./NewChapter";
 import sprite from "../../assets/images/about/symbol-defs.svg";
-import aboutText from "./aboutText";
+import aboutVariables from "./aboutText";
 import "./About.scss";
 
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
     <section className="about" id="about">
       <h2>Немного о себе</h2>
       <article>
-        <h3>{aboutText.article_1.articleTitle}</h3>
+        <h3>{aboutVariables.article_1.articleTitle}</h3>
         <JustYesterday />
       </article>
       <div>
@@ -19,7 +19,7 @@ const About = () => {
         </svg>
       </div>
       <article>
-        <h3>{aboutText.article_2.articleTitle}</h3>
+        <h3>{aboutVariables.article_2.articleTitle}</h3>
         <NewChapter />
       </article>
       <div>

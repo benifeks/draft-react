@@ -1,0 +1,36 @@
+src/
+├── assets/           # Статичные ресурсы (картинки, шрифты, иконки)
+├── components/       # Компоненты с бизнес-логикой и UI, специфичные для проекта
+│   ├── Header/
+│   ├── Footer/
+│   └── UserProfile/
+├── ui/               # Универсальные, переиспользуемые визуальные компоненты
+│   ├── Button/
+│   ├── Input/
+│   └── Modal/
+├── hooks/            # Кастомные React-хуки (логика без UI)
+│   └── useFetch.js
+├── utils/            # Утилитарные функции и помощники
+│   └── formatDate.js
+├── services/         # Работа с API и внешними сервисами
+│   └── api.js
+├── store/            # Управление состоянием (Redux, Zustand, MobX и т.п.)
+│   ├── actions.js
+│   └── reducer.js
+├── pages/            # Страницы, которые рендерятся по маршрутам
+│   ├── Home/
+│   └── About/
+├── styles/           # Глобальные стили, переменные, миксины
+│   ├── _variables.scss
+│   └── main.scss
+├── App.jsx           # Главный компонент приложения
+└── main.jsx          # Точка входа в приложение (ReactDOM.render и т.п.)
+;======================================================================
+GGPromarket:
+https://www.figma.com/design/4cW1WStqQLjyWSQVNFSL42/GGPromarket?node-id=0-1&p=f&t=4nCiSgLNqXpyulkJ-0
+
+Beauti-zone:
+https://www.figma.com/design/sBABARapP4nL9lK1dG3n1l/Beauty-Zone?node-id=30-13827&p=f&t=69mviQbKDLHLBFfT-0
+
+Bakery:
+https://www.figma.com/design/fDlsHwelyuOVsfUmCzm3dA/%D0%A1%D1%83%D1%87%D0%B0%D1%81%D0%BD%D1%8F-%D0%BF%D0%B5%D0%BA%D0%B0%D1%80%D0%BD%D1%8F?node-id=0-1&p=f&t=P5EdFZ0JVFgpBbGg-0

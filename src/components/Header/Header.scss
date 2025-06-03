@@ -1,5 +1,6 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/mixins";
+@import "../../styles/utils/functions";
 
 a {
   @include links;
@@ -8,17 +9,17 @@ a {
 .nav {
   @include wrapper;
   @include flex-between;
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
   font-weight: 500;
-  padding: 1rem 0;
+  padding: rem(16) 0;
 
   &__left-nav {
     @include flex-between;
     justify-content: start;
-    gap: 2rem;
+    gap: rem(32);
 
     &--logo {
-      font-size: 1.5rem;
+      @include font-size($font-size-xl);
       font-weight: bold;
       font-family: $font-family-secondary;
       color: $text-color;
@@ -32,20 +33,20 @@ a {
 
     &--personal-links {
       display: flex;
-      gap: 1.5rem;
+      gap: rem(24);
     }
   }
 
   &__right-nav {
     display: flex;
-    gap: 2rem;
+    gap: rem(32);
 
     &--contacts {
       display: flex;
-      gap: 1rem;
+      gap: rem(16);
 
       a {
-        font-size: $font-size-xl;
+        @include font-size($font-size-xl);
         color: $primary-color;
 
         &:hover {

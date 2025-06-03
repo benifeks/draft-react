@@ -1,7 +1,13 @@
-const aboutText = {
+import my_foto_1 from "../../assets/images/about/my_foto_1.jpg";
+import my_foto_2 from "../../assets/images/about/my_foto_2.jpg";
+import sprite from "../../assets/images/about/symbol-defs.svg";
+
+const aboutVariables = {
   title: "Немного о себе",
+  sprite: sprite,
   article_1: {
     articleTitle: "'Ещё вчера...'",
+    imageUrl: my_foto_1,
     imageAlt: "photo of miner",
     messageOne: `Мне 52 года, и я уже на пенсии. Более 20 лет проработал
                     шахтёром — знал, что такое тяжёлый труд, пыль, усталость, но
@@ -18,6 +24,7 @@ const aboutText = {
   },
   article_2: {
     articleTitle: "Новая глава: от шахтёра к фронтенду",
+    imageUrl: my_foto_2,
     imageAlt: "photo of man with laptop",
     messageOne: `Но когда шахта осталась в прошлом, я понял — просто сидеть
                     без дела не смогу. Искал, чем заняться, и неожиданно увлёкся
@@ -31,4 +38,4 @@ const aboutText = {
   },
 };
 
-export default aboutText;
+export default aboutVariables;

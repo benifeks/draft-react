@@ -5,11 +5,14 @@
 h2 {
   @include font-size(48);
   text-align: center;
+  margin-bottom: rem(32);
 }
 
 h3 {
   @include font-size(32);
   @include neucha;
+  text-align: center;
+  margin-bottom: rem(32);
 }
 
 header {
