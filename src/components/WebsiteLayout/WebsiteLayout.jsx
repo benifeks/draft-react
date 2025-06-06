@@ -7,7 +7,7 @@ const WebsiteLayout = () => {
   return (
     <section className="website-layout" id="website-layout">
       <h2>Вёрстка</h2>
-      <h3>Реализация интерфейса по макету Figma 🎨 🖌️ </h3>
+      <h3>🖌️ Реализация интерфейса по макету Figma 🎨 </h3>
       <CustomSwiper
         slides={slidesData}
         slidesPerView={3}

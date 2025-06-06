@@ -30,6 +30,14 @@ const Header = () => {
               Вёрстка
             </a>
           </li>
+          <li>
+            <a
+              href="#js-in-practice"
+              onClick={() => goToHomeAnchor("js-in-practice")}
+            >
+              Практика <span lang="en">JS</span>
+            </a>
+          </li>
         </ul>
       </div>
       <ul className="nav__right-nav">

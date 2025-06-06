@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/App.scss";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Lab from "./pages/Lab/Lab";
@@ -10,7 +11,8 @@ import WebsiteLayout from "./components/WebsiteLayout/WebsiteLayout";
 import Bakery from "./pages/Bakery/Bakery";
 import GGPromarket from "./pages/GGPromarket/GGPromarket";
 import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
-import "./styles/App.scss";
+import JSinPractice from "./components/JSinPractice/JSinPractice";
+import Projects from "./pages/Projects/Projects";
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
                   <Hero />
                   <About />
                   <WebsiteLayout />
+                  <JSinPractice />
                   {/* Другие основные секции */}
                 </>
               }
@@ -38,6 +41,7 @@ function App() {
             <Route path="/bakery" element={<Bakery />} />
             <Route path="/ggpromarket" element={<GGPromarket />} />
             <Route path="/beauty-zone" element={<BeautyZone />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </main>
         <footer>

@@ -79,6 +79,7 @@
 
   &__button-prev:active,
   &__button-next:active {
+    color: $text-light;
     background-color: $secondary-color;
   }
 

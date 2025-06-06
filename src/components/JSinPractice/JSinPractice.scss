@@ -1,0 +1,41 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/functions";
+
+.js-in-practice {
+  &__description {
+    @include font-size($font-size-large);
+    text-align: center;
+  }
+
+  &__container {
+    @include flex-around;
+
+    &--columns {
+      @include flex-column;
+      gap: rem(16);
+
+      &__card {
+        border: rem(1) solid $text-color;
+        border-radius: rem(8);
+        padding: rem(16);
+
+        &--btn {
+          background-color: $secondary-color;
+          color: $text-light;
+          padding: rem(6) rem(12);
+          border: none;
+          border-radius: rem(8);
+          cursor: pointer;
+          font-weight: 600;
+          transition: background-color 0.3s ease;
+        }
+
+        &--btn:hover {
+          color: $text-light;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
