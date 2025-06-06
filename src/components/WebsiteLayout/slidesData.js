@@ -7,7 +7,7 @@ const slidesData = [
     image: fant_1,
     alt: "fant_1",
     cardLink: {
-      cardLinkUrl: "https://example.com/1",
+      cardLinkUrl: "/bakery",
       cardLinkText: "Подробнее...",
       cardLinkClass: "website-layout__swiper--slide__link",
     },
@@ -22,7 +22,7 @@ const slidesData = [
     image: fant_2,
     alt: "fant_2",
     cardLink: {
-      cardLinkUrl: "https://example.com/2",
+      cardLinkUrl: "/beauty-zone",
       cardLinkText: "Подробнее...",
       cardLinkClass: "website-layout__swiper--slide__link",
     },
@@ -37,7 +37,7 @@ const slidesData = [
     image: fant_3,
     alt: "fant_3",
     cardLink: {
-      cardLinkUrl: "https://example.com/3",
+      cardLinkUrl: "/ggpromarket",
       cardLinkText: "Подробнее...",
       cardLinkClass: "website-layout__swiper--slide__link",
     },
@@ -52,7 +52,7 @@ const slidesData = [
     image: fant_1,
     alt: "fant_1",
     cardLink: {
-      cardLinkUrl: "https://example.com/1",
+      cardLinkUrl: "/bakery",
       cardLinkText: "Подробнее...",
       cardLinkClass: "website-layout__swiper--slide__link",
     },
@@ -67,7 +67,7 @@ const slidesData = [
     image: fant_2,
     alt: "fant_2",
     cardLink: {
-      cardLinkUrl: "https://example.com/2",
+      cardLinkUrl: "/beauty-zone",
       cardLinkText: "Подробнее...",
       cardLinkClass: "website-layout__swiper--slide__link",
     },
@@ -82,7 +82,7 @@ const slidesData = [
     image: fant_3,
     alt: "fant_3",
     cardLink: {
-      cardLinkUrl: "https://example.com/3",
+      cardLinkUrl: "/ggpromarket",
       cardLinkText: "Подробнее...",
       cardLinkClass: "website-layout__swiper--slide__link",
     },

@@ -23,8 +23,6 @@ a {
       font-weight: bold;
       font-family: $font-family-secondary;
       color: $text-color;
-      text-decoration: none;
-      transition: color $transition-duration $transition-timing-function;
 
       &:hover {
         color: $primary-color;

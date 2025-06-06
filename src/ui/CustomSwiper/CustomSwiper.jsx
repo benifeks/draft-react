@@ -52,7 +52,7 @@ const CustomSwiper = ({
         className={classNameButtonPrev}
         onClick={() => swiperRef.current?.slidePrev()}
       >
-        ← Назад
+        &#10149;
       </button>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
@@ -84,12 +84,7 @@ const CustomSwiper = ({
             )}
             <img src={image} alt={alt} />
             {cardLink.cardLinkUrl && (
-              <a
-                href={cardLink.cardLinkUrl}
-                className={cardLink.cardLinkClass}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={cardLink.cardLinkUrl} className={cardLink.cardLinkClass}>
                 {cardLink.cardLinkText || "Подробнее"}
               </a>
             )}
@@ -102,7 +97,7 @@ const CustomSwiper = ({
         className={classNameButtonNext}
         onClick={() => swiperRef.current?.slideNext()}
       >
-        Вперед →
+        &#10150;
       </button>
     </div>
   );

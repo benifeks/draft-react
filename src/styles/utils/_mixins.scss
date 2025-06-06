@@ -22,6 +22,7 @@
   color: $text-color;
   font-weight: 500;
   transition: color $transition-duration $transition-timing-function;
+  transition: font-size rem(50) $transition-timing-function;
 
   &:hover {
     color: $primary-color;

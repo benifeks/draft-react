@@ -7,6 +7,9 @@ import Exercises from "./pages/Exercises/Exercises";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import WebsiteLayout from "./components/WebsiteLayout/WebsiteLayout";
+import Bakery from "./pages/Bakery/Bakery";
+import GGPromarket from "./pages/GGPromarket/GGPromarket";
+import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
 import "./styles/App.scss";
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
             />
             <Route path="/lab" element={<Lab />} />
             <Route path="/exercises" element={<Exercises />} />
+            <Route path="/bakery" element={<Bakery />} />
+            <Route path="/ggpromarket" element={<GGPromarket />} />
+            <Route path="/beauty-zone" element={<BeautyZone />} />
           </Routes>
         </main>
         <footer>
