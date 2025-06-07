@@ -1,0 +1,10 @@
+.local-server-data {
+  padding: 20px;
+  border: 1px solid green;
+
+  &__delete-server-button {
+    color: red;
+    padding: 0 5px;
+    margin: 5px;
+  }
+}
