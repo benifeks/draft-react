@@ -38,6 +38,11 @@ const Header = () => {
               Практика <span lang="en">JS</span>
             </a>
           </li>
+          <li>
+            <a href="#contact-form" onClick={() => goToHomeAnchor("contact")}>
+              Написать мне
+            </a>
+          </li>
         </ul>
       </div>
       <ul className="nav__right-nav">

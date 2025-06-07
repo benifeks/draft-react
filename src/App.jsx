@@ -13,6 +13,7 @@ import GGPromarket from "./pages/GGPromarket/GGPromarket";
 import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
 import JSinPractice from "./components/JSinPractice/JSinPractice";
 import Projects from "./pages/Projects/Projects";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                   <About />
                   <WebsiteLayout />
                   <JSinPractice />
+                  <ContactForm />
                   {/* Другие основные секции */}
                 </>
               }
