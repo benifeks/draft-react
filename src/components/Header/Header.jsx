@@ -53,10 +53,20 @@ const Header = () => {
           <a href="/exercises">Задачи</a>
         </li>
         <li className="nav__right-nav--contacts">
-          <a href="#contact">
+          <a
+            className="accent"
+            href="https://facebook.com/skurko.sergej.2025/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsFacebook />
           </a>
-          <a href="#contact">
+          <a
+            className="accent"
+            href="https://t.me/benifeks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsTelegram />
           </a>
         </li>

@@ -1,0 +1,44 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/functions";
+
+.my-courses {
+  &__container {
+    @include flex-around;
+    gap: rem(16);
+
+    &--item {
+      @include flex-column;
+      @include font-size($font-size-large);
+      gap: rem(8);
+      background-color: $background-card;
+      border-radius: rem(8);
+      padding: rem(16);
+
+      &__icons {
+        @include flex-around;
+        gap: rem(8);
+
+        &--icon-logo {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
+
+.external-link-button {
+  display: inline-block;
+  padding: rem(6) rem(12);
+  background-color: $secondary-color;
+  color: $text-light;
+  border-radius: rem(4);
+  font-weight: 600;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: $text-color;
+    background-color: $primary-color;
+  }
+}

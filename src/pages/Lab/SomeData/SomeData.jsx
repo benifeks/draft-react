@@ -41,7 +41,6 @@ const SomeData = () => {
   return (
     <section className="some-data">
       <h2>SomeData</h2>
-
       <div className="some-data__local-server-block">
         <LocalServerData />
         <PostServer />

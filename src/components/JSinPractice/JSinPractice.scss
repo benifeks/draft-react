@@ -16,7 +16,7 @@
       gap: rem(16);
 
       &__card {
-        border: rem(1) solid $text-color;
+        background-color: $background-card;
         border-radius: rem(8);
         padding: rem(16);
 
@@ -32,7 +32,7 @@
         }
 
         &--btn:hover {
-          color: $text-light;
+          color: $text-color;
           background-color: $primary-color;
         }
       }

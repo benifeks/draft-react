@@ -14,6 +14,8 @@ import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
 import JSinPractice from "./components/JSinPractice/JSinPractice";
 import Projects from "./pages/Projects/Projects";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Technologies from "./components/Technologies/Technologies";
+import MyCourses from "./components/MyCourses/MyCourses";
 
 function App() {
   return (
@@ -31,8 +33,10 @@ function App() {
                 <>
                   <Hero />
                   <About />
+                  <Technologies />
                   <WebsiteLayout />
                   <JSinPractice />
+                  <MyCourses />
                   <ContactForm />
                   {/* Другие основные секции */}
                 </>
