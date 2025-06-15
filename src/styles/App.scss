@@ -32,6 +32,10 @@ section {
   margin-bottom: rem(80);
 }
 
+a {
+  @include links;
+}
+
 .pad {
   height: rem(30);
 }

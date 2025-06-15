@@ -1,0 +1,42 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.right-nav-list {
+  position: relative;
+  display: inline-block;
+  // важно: чтобы список был относительно кнопки
+
+  &__toggle {
+    @include font-size($font-size-base);
+    cursor: pointer;
+    color: $text-color;
+    font-weight: bold;
+    padding: rem(6) rem(10);
+    border-radius: rem(4);
+    background-color: #f3f3f3;
+    transition: background-color 0.3s;
+    width: 100%;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%; // прямо под кнопкой
+    margin-top: rem(4);
+    padding: rem(8);
+    background-color: $background-card;
+    border-radius: rem(4);
+
+    li {
+      margin-bottom: rem(6);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

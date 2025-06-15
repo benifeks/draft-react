@@ -1,56 +1,47 @@
-@import "../../styles/utils/variables";
-@import "../../styles/utils/mixins";
 @import "../../styles/utils/functions";
-
-a {
-  @include links;
-}
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/variables";
 
 .nav {
   @include wrapper;
   @include flex-between;
   @include font-size($font-size-base);
+  padding: rem(16) rem(8);
   font-weight: 500;
-  padding: rem(16) 0;
 
-  &__left-nav {
+  &__left {
     @include flex-between;
-    justify-content: start;
-    gap: rem(32);
+    gap: rem(16);
+    flex-shrink: 0;
 
-    &--logo {
-      @include font-size($font-size-xl);
-      font-weight: bold;
-      font-family: $font-family-secondary;
-      color: $text-color;
+    &--nav-list {
+      display: none;
+    }
 
-      &:hover {
-        color: $primary-color;
+    @media (max-width: $breakpoint-md) {
+      &--nav-list {
+        display: block;
+      }
+      &--nav {
+        display: none;
       }
     }
 
-    &--personal-links {
-      display: flex;
-      gap: rem(24);
+    @media (max-width: $breakpoint-sm) {
+      @include flex-column;
+      gap: rem(16);
     }
   }
 
   &__right-nav {
-    display: flex;
-    gap: rem(32);
+    @include flex-around;
+    gap: rem(16);
+    flex-shrink: 0;
 
-    &--contacts {
-      display: flex;
+    @media (max-width: $breakpoint-sm) {
+      @include flex-column;
+      flex-direction: column-reverse;
       gap: rem(16);
-
-      a {
-        @include font-size($font-size-xl);
-        color: $primary-color;
-
-        &:hover {
-          color: $text-color;
-        }
-      }
     }
   }
 }

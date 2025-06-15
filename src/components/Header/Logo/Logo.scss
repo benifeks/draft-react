@@ -1,0 +1,16 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.nav__left-nav--logo {
+  @include font-size($font-size-xl);
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: $font-family-secondary;
+  color: $text-color;
+
+  & :hover {
+    color: $primary-color;
+  }
+}

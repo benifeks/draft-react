@@ -1,0 +1,27 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.right-nav {
+  display: flex;
+  gap: rem(16);
+
+  &__pages-list {
+    display: none;
+  }
+
+  &__pages {
+    @include flex-around;
+    gap: rem(16);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    &__pages {
+      display: none;
+    }
+
+    &__pages-list {
+      display: block;
+    }
+  }
+}

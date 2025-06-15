@@ -1,0 +1,17 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.contacts {
+  display: inline-flex;
+  gap: rem(16);
+
+  a.accent {
+    @include font-size($font-size-xl);
+    color: $primary-color;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
