@@ -1,6 +1,6 @@
-import React from "react";
-
 import "./Logo.scss";
+
+import React from "react";
 
 const Logo = () => {
   return (

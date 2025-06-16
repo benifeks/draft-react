@@ -1,13 +1,70 @@
+@use "../../styles/utils/functions";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/variables";
+
 .technologies {
+  &__title--h3 {
+    @include flex-center;
+    gap: rem(12);
+
+    @media (max-width: $breakpoint-sm) {
+      @include flex-column;
+      gap: rem(8);
+    }
+  }
+
   &__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
+    @include flex-center;
+    gap: rem(64);
+
+    @media (max-width: $breakpoint-xl) {
+      gap: rem(54);
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      gap: rem(32);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      @include flex-column;
+      gap: rem(24);
+    }
+
+    &--block {
+      @include flex-between;
+      gap: rem(64);
+
+      @media (max-width: $breakpoint-xl) {
+        gap: rem(54);
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        gap: rem(32);
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        gap: rem(16);
+      }
+    }
 
     &--icon-logo {
-      width: 114px;
-      height: 56px;
+      width: rem(56);
+      height: rem(56);
+
+      @media (max-width: $breakpoint-xl) {
+        width: rem(50);
+        height: rem(50);
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        width: rem(44);
+        height: rem(44);
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: rem(36);
+        height: rem(36);
+      }
     }
   }
 }

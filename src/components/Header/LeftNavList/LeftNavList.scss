@@ -25,7 +25,6 @@
 
     &__list {
       position: absolute;
-      top: 100%; // прямо под кнопкой
       margin-top: rem(4);
       padding: rem(8);
       background-color: $background-card;

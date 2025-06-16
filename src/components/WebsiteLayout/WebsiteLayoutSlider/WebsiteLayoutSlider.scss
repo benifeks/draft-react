@@ -1,0 +1,65 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.sliderContainer {
+  @include flex-center;
+  position: relative;
+  gap: rem(12);
+  padding: rem(16) rem(16);
+
+  &__navButton {
+    background: transparent;
+    border: none;
+    font-size: rem(28);
+    padding: rem(2);
+    cursor: pointer;
+  }
+
+  &__navButton:active {
+    background: $background-card;
+  }
+
+  &__slide {
+    @include flex-column;
+    gap: rem(8);
+
+    &--messageClass {
+      @include font-size($font-size-large);
+
+      a {
+        color: $secondary-color;
+        text-decoration: underline;
+      }
+    }
+
+    &--slideImageWrapper {
+      position: relative;
+      border-radius: rem(8);
+      overflow: hidden;
+
+      &--slideImage {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: rem(8);
+        box-shadow: 0 rem(2) rem(6) rgba(0, 0, 0, 0.1);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba($background-card, 0.1),
+          rgba($secondary-color, 0.7)
+        );
+        pointer-events: none;
+      }
+    }
+  }
+}

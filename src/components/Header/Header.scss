@@ -14,19 +14,6 @@
     gap: rem(16);
     flex-shrink: 0;
 
-    &--nav-list {
-      display: none;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      &--nav-list {
-        display: block;
-      }
-      &--nav {
-        display: none;
-      }
-    }
-
     @media (max-width: $breakpoint-sm) {
       @include flex-column;
       gap: rem(16);

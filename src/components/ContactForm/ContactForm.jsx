@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import "./ContactForm.scss";
+
+import emailjs from "emailjs-com";
+import React, { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -39,12 +40,8 @@ const ContactForm = () => {
   return (
     <section className="contact-form" id="contact-form">
       <h2>Свяжитесь со мной</h2>
-      <h3>🎉 Или просто напишите, мне будет приятно! 🥳</h3>
-      <form
-        className="form"
-        onSubmit={handleSubmit}
-        style={{ maxWidth: 400, margin: "auto" }}
-      >
+      <h3>🎉 Жду Ваших букв! 🥳</h3>
+      <form className="form" onSubmit={handleSubmit}>
         <label>
           Ваш email:
           <input

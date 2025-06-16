@@ -1,27 +1,32 @@
-@import "../../styles/utils/variables";
-@import "../../styles/utils/mixins";
 @import "../../styles/utils/functions";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/variables";
 
 .form {
-  max-width: 500px;
+  @include flex-column;
+  @include font-size($font-size-base);
+  max-width: rem(400);
   margin: 0 auto;
-  padding: 24px;
+  padding: rem(24);
   background-color: $background-card;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  border-radius: rem(16);
+  box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.05);
+  gap: rem(16);
   font-family: "Segoe UI", sans-serif;
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: rem(280);
+    padding: rem(12);
+  }
 }
 
 .input,
 .textarea {
+  @include font-size($font-size-base);
   width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: rem(12) rem(16);
+  border: rem(1) solid #ccc;
+  border-radius: rem(8);
   transition: border 0.2s ease;
   font-family: inherit;
 
@@ -34,17 +39,17 @@
 
 .textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: rem(120);
 }
 
 .button {
-  padding: 12px 20px;
+  @include font-size($font-size-base);
+  padding: rem(12) rem(20);
   background-color: $secondary-color;
   color: $text-light;
   font-weight: 500;
-  font-size: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: rem(8);
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -60,9 +65,9 @@
 }
 
 .status {
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin-top: 15px;
+  padding: rem(10) rem(20);
+  border-radius: rem(6);
+  margin-top: rem(15);
   cursor: pointer;
   transition: opacity 0.3s ease;
   font-weight: 500;
@@ -72,14 +77,14 @@
   }
 
   &.success {
-    background-color: #e6f4ea;
+    background-color: $background-card;
     color: #276738;
-    border: 1px solid #276738;
+    border: rem(1) solid #276738;
   }
 
   &.error {
-    background-color: #fbeaea;
+    background-color: $background-card;
     color: #a42828;
-    border: 1px solid #a42828;
+    border: rem(1) solid #a42828;
   }
 }

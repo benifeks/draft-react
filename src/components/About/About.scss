@@ -1,37 +1,78 @@
-@import "../../styles/utils/variables";
-@import "../../styles/utils/mixins";
 @import "../../styles/utils/functions";
-
-p {
-  margin-bottom: rem(16);
-}
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/variables";
 
 .about {
-  @include flex-column;
-  @include font-size($font-size-large);
-  align-items: center;
-  text-align: center;
-  gap: rem(48);
-  .about-card {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem;
-    text-align: left;
-    &__item {
-      flex: 1;
+  padding: rem(16);
+
+  &__container {
+    @include flex-around;
+    gap: rem(16);
+    flex-wrap: wrap;
+    align-items: stretch; // важно!
+
+    &--card {
+      @include flex-column;
+      gap: rem(16);
       padding: rem(16);
-    }
-    &__img {
-      img.left {
-        border-top-right-radius: 45%;
-        border-bottom-left-radius: 45%;
-        transform: rotate(10deg);
+      max-width: rem(450);
+      flex: 1 1 rem(280);
+      justify-content: space-between; // если нужно тянуть контент вниз
+      height: 100%; // важно!
+      background-color: $background-card;
+      border-radius: rem(16);
+
+      &__svg {
+        margin: 0 auto;
+        width: rem(150);
+        height: rem(150);
+
+        @media (max-width: $breakpoint-lg) {
+          width: rem(130);
+          height: rem(130);
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          width: rem(100);
+          height: rem(100);
+        }
       }
-      img.right {
-        border-top-left-radius: 45%;
-        border-bottom-right-radius: 45%;
-        transform: rotate(-10deg);
+
+      @media (max-width: $breakpoint-lg) {
+        max-width: rem(360);
+        padding: rem(8);
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        max-width: rem(280);
+      }
+
+      .image-wrapper {
+        aspect-ratio: 4 / 3; // можно подстраивать
+        width: 100%;
+        overflow: hidden;
+        border-radius: rem(8);
+
+        &__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; // обрезает лишнее, но сохраняет пропорции
+          display: block;
+        }
       }
     }
+
+    @media (max-width: $breakpoint-md) {
+      @include flex-column;
+      gap: rem(16);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      gap: rem(8);
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: rem(8);
   }
 }

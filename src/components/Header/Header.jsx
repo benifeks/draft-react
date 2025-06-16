@@ -1,10 +1,9 @@
-import React from "react";
-
 import "./Header.scss";
+
+import React from "react";
 
 import Contacts from "./Contacts/Contacts";
 import LeftNav from "./LeftNav/LeftNav";
-import LeftNavList from "./LeftNavList/LeftNavList";
 import Logo from "./Logo/Logo";
 import RightNav from "./RightNav/RightNav";
 
@@ -15,9 +14,6 @@ const Header = () => {
         <Logo className="nav__left--logo" />
         <div className="nav__left--nav">
           <LeftNav />
-        </div>
-        <div className="nav__left--nav-list">
-          <LeftNavList />
         </div>
       </div>
       <div className="nav__right-nav">

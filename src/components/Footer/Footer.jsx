@@ -1,8 +1,9 @@
+import "./Footer.scss";
+
 import React from "react";
 import { BsFacebook } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import "./Footer.scss";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -11,8 +12,8 @@ const Footer = () => {
   };
 
   return (
-    <section className="footer">
-      <div className="footer__info">
+    <section className="footer" id="footer">
+      <nav className="footer__info">
         <ul className="footer__info--section">
           <li>
             <h4>Контакты</h4>
@@ -57,22 +58,12 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <ul className="footer__info--section">
-          <li>
-            <h4>Навигация</h4>
-          </li>
-          <li>
-            <a href="#home" onClick={() => goToHomeAnchor("home")}>
-              В начало страницы
-            </a>
-          </li>
-          <li>
-            <a href="/exercises">Задачи</a>
-          </li>
-        </ul>
-      </div>
+      </nav>
       <div className="footer__bottom">
-        <p>&copy; {new Date().getFullYear()} Portfolio. Все права защищены.</p>
+        <p>
+          &copy; {new Date().getFullYear()} <span lang="en">Portfolio.</span>
+          Все права защищены.
+        </p>
       </div>
     </section>
   );

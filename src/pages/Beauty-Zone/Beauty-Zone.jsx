@@ -1,5 +1,6 @@
-import React from "react";
 import "./Beauty-Zone.scss";
+
+import React from "react";
 
 const BeautyZone = () => {
   return (

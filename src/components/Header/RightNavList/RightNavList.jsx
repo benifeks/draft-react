@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-
 import "./RightNavList.scss";
+
+import React, { useState } from "react";
 
 const RightNavList = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,9 +1,6 @@
-@import "../../styles/utils/variables";
+@use "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
-
-h1 {
-  font-size: 4rem;
-}
+@import "../../styles/utils/variables";
 
 .hero {
   @include wrapper;
@@ -16,6 +13,8 @@ h1 {
   color: $text-color;
   line-height: 5rem;
   overflow: hidden;
+  margin-top: rem(30);
+  padding: rem(16);
 
   // УБИРАЕМ background-image отсюда
 
@@ -69,5 +68,13 @@ h1 {
     top: 0;
     text-shadow: 0 0 4px rgba(44, 62, 80, 0.4), 0 0 8px rgba(44, 62, 80, 0.3),
       0 0 12px rgba(44, 62, 80, 0.2);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    margin-top: rem(50);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    margin-top: rem(100);
   }
 }

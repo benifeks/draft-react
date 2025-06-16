@@ -35,10 +35,16 @@ export const Card = ({
       target={link ? "_blank" : undefined}
       rel="noopener noreferrer"
     >
-      {image && (
-        <img src={image} alt={title || "card image"} className="card-image" />
-      )}
-      {title && <h5 className="card-title">{title}</h5>}
+      {title && <h3 className="card-title">{title}</h3>}
+      <div className="image-wrapper">
+        {image && (
+          <img
+            src={image}
+            alt={title || "card image"}
+            className="image-wrapper__image"
+          />
+        )}
+      </div>
       {description && <p className="card-description">{description}</p>}
       {children}
     </article>

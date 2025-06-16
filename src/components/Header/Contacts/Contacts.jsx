@@ -1,7 +1,7 @@
+import "./Contacts.scss";
+
 import React from "react";
 import { BsFacebook, BsTelegram } from "react-icons/bs";
-
-import "./Contacts.scss";
 
 const Contacts = () => {
   return (

@@ -1,13 +1,15 @@
-import React from "react";
 import "./MyCourses.scss";
-import { courses } from "./courses";
+
+import React from "react";
+
 import symbolDefs from "../../assets/images/svg/technologies/symbol-defs.svg";
+import { courses } from "./courses";
 
 const MyCourses = () => {
   return (
     <section className="my-courses" id="my-courses">
       <h2>Курсы</h2>
-      <h3>📚 Обучающие курсы которые я проходил 👣</h3>
+      <h3>📚 Курсы которые я проходил 👣</h3>
       <ul className="my-courses__container">
         {courses.map((course) => (
           <li className="my-courses__container--item" key={course.id}>

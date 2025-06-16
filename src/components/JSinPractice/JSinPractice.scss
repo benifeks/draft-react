@@ -1,8 +1,14 @@
-@import "../../styles/utils/variables";
+@use "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
-@import "../../styles/utils/functions";
+@import "../../styles/utils/variables";
 
 .js-in-practice {
+  .article {
+    @include flex-column;
+    @include font-size($font-size-xl);
+    gap: rem(16);
+  }
+
   &__description {
     @include font-size($font-size-large);
     text-align: center;
@@ -35,7 +41,16 @@
           color: $text-color;
           background-color: $primary-color;
         }
+
+        @media (max-width: $breakpoint-md) {
+          @include font-size($font-size-base);
+          max-width: rem(220);
+        }
       }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      @include flex-column;
     }
   }
 }

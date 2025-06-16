@@ -1,6 +1,6 @@
-import React from "react";
-
 import "./RightNav.scss";
+
+import React from "react";
 
 import RightNavList from "../RightNavList/RightNavList";
 
@@ -15,7 +15,13 @@ const RightNav = () => {
           <a href="/lab">Лаборатория</a>
         </li>
         <li>
-          <a href="/exercises">Задачи</a>
+          <a
+            href="https://github.com/benifeks/draft-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span lang="en">GitHub</span>
+          </a>
         </li>
       </ul>
     </nav>

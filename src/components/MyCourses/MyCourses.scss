@@ -1,11 +1,11 @@
-@import "../../styles/utils/variables";
+@use "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
-@import "../../styles/utils/functions";
+@import "../../styles/utils/variables";
 
 .my-courses {
   &__container {
     @include flex-around;
-    gap: rem(16);
+    gap: rem(2);
 
     &--item {
       @include flex-column;
@@ -13,7 +13,8 @@
       gap: rem(8);
       background-color: $background-card;
       border-radius: rem(8);
-      padding: rem(16);
+      padding: rem(8);
+      flex-shrink: 0;
 
       &__icons {
         @include flex-around;
@@ -24,6 +25,15 @@
           height: 48px;
         }
       }
+
+      @media (max-width: $breakpoint-md) {
+        width: rem(250);
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      @include flex-column;
+      gap: rem(16);
     }
   }
 }

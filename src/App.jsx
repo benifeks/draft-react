@@ -1,21 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.scss";
+
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import About from "./components/About/About";
+import ContactForm from "./components/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Lab from "./pages/Lab/Lab";
-import Exercises from "./pages/Exercises/Exercises";
-import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
+import JSinPractice from "./components/JSinPractice/JSinPractice";
+import MyCourses from "./components/MyCourses/MyCourses";
+import Technologies from "./components/Technologies/Technologies";
 import WebsiteLayout from "./components/WebsiteLayout/WebsiteLayout";
 import Bakery from "./pages/Bakery/Bakery";
-import GGPromarket from "./pages/GGPromarket/GGPromarket";
 import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
-import JSinPractice from "./components/JSinPractice/JSinPractice";
+import Exercises from "./pages/Exercises/Exercises";
+import GGPromarket from "./pages/GGPromarket/GGPromarket";
+import Lab from "./pages/Lab/Lab";
 import Projects from "./pages/Projects/Projects";
-import ContactForm from "./components/ContactForm/ContactForm";
-import Technologies from "./components/Technologies/Technologies";
-import MyCourses from "./components/MyCourses/MyCourses";
 
 function App() {
   return (
@@ -25,7 +27,6 @@ function App() {
           <Header />
         </header>
         <main>
-          <div className="pad"></div>
           <Routes>
             <Route
               path="/"

@@ -1,17 +1,26 @@
-@import "./utils/variables";
-@import "./utils/mixins";
 @import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/variables";
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin-left: rem(16);
+  margin-right: rem(16);
+}
+
+h1 {
+  @include font-size(64);
+}
 
 h2 {
   @include font-size(48);
-  text-align: center;
-  margin-bottom: rem(32);
 }
 
 h3 {
   @include font-size(32);
   @include neucha;
-  text-align: center;
   margin-bottom: rem(32);
 }
 
@@ -25,10 +34,14 @@ header {
 
 main {
   @include wrapper;
+  display: flex;
+  flex-direction: column;
   color: $text-color;
+  width: 100%; // важно!
 }
 
 section {
+  width: 100%; // обязательно, чтобы секции не сужались
   margin-bottom: rem(80);
 }
 
@@ -36,6 +49,26 @@ a {
   @include links;
 }
 
-.pad {
-  height: rem(30);
+@media (max-width: $breakpoint-md) {
+  h1 {
+    @include font-size(56);
+  }
+  h2 {
+    @include font-size(40);
+  }
+  h3 {
+    @include font-size(24);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  h1 {
+    @include font-size(48);
+  }
+  h2 {
+    @include font-size(32);
+  }
+  h3 {
+    @include font-size(16);
+  }
 }

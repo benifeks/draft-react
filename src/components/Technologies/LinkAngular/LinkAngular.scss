@@ -1,0 +1,39 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.link-angular {
+  @include flex-center;
+  gap: rem(8);
+  margin-top: rem(32);
+
+  a {
+    @include flex-center;
+    @include font-size($font-size-xl);
+    text-decoration: underline;
+    gap: rem(8);
+
+    @media (max-width: $breakpoint-md) {
+      @include font-size($font-size-large);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      @include font-size($font-size-base);
+    }
+  }
+
+  &--logo {
+    width: rem(32);
+    height: rem(32);
+
+    @media (max-width: $breakpoint-md) {
+      width: rem(28);
+      height: rem(28);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+}
