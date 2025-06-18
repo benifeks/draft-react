@@ -1,11 +1,12 @@
 import React from "react";
-import "./Exercises.scss";
+
+import styles from "./Exercises.module.scss";
 
 const Exercises = () => {
   return (
-    <div className="exercises">
+    <div className={styles.exercises}>
       <h2>Задачи и упражнения</h2>
-      <div className="exercises-container"></div>
+      <div className={styles.exercisesContainer}></div>
     </div>
   );
 };
