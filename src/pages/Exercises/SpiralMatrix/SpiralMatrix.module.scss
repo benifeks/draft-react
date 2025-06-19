@@ -1,0 +1,23 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.SpiralMatrix {
+  &__input {
+    @include font-size($font-size-base);
+    width: 100%;
+    padding: rem(4);
+    box-sizing: border-box;
+    margin: rem(8) auto;
+  }
+
+  &__buttons {
+    @include flex-between;
+    gap: rem(8);
+  }
+
+  &__matrix {
+    @include flex-center;
+    margin: rem(20);
+  }
+}

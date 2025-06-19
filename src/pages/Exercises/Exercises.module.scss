@@ -3,9 +3,8 @@
 @import "../../styles/utils/variables";
 
 .exercises {
-  margin-top: 100px;
-}
+  margin-top: rem(100);
 
-.exercisesContainer {
-  margin-top: 50px;
+  &__container {
+  }
 }

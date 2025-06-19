@@ -1,13 +1,16 @@
 import React from "react";
 
 import styles from "./Exercises.module.scss";
+import SpiralMatrix from "./SpiralMatrix/SpiralMatrix";
 
 const Exercises = () => {
   return (
-    <div className={styles.exercises}>
+    <section className={styles.exercises}>
       <h2>Задачи и упражнения</h2>
-      <div className={styles.exercisesContainer}></div>
-    </div>
+      <div className={styles.exercises__container}>
+        <SpiralMatrix />
+      </div>
+    </section>
   );
 };
 
