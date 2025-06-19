@@ -3,8 +3,12 @@
 @import "../../styles/utils/variables";
 
 .exercises {
+  @include flex-column;
   margin-top: rem(100);
 
   &__container {
+    @include flex-around;
+    align-items: start;
+    gap: rem(16);
   }
 }

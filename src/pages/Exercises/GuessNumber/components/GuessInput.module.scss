@@ -1,0 +1,12 @@
+@import "../../styles/exercisesMixins";
+
+.GuessInput {
+  &__input {
+    @include exercises-input;
+  }
+
+  &__buttons {
+    @include flex-between;
+    gap: rem(8);
+  }
+}

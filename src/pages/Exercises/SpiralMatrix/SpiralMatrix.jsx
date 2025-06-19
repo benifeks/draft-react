@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import ButtonExercises from "../ui/ButtonExercises/ButtonExercises";
 import CardExercises from "../ui/CardExercises/CardExercises";
 import styles from "./SpiralMatrix.module.scss";
 import { handleClear, handleStart } from "./spiralMatrix.utils";
@@ -13,6 +12,7 @@ const SpiralMatrix = () => {
     <CardExercises title="Спиральная матрица" className={styles.SpiralMatrix}>
       <input
         className={styles.SpiralMatrix__input}
+        name="SpiralMatrixInput"
         type="number"
         min="1"
         max="9"
@@ -30,14 +30,12 @@ const SpiralMatrix = () => {
       />
 
       <div className={styles.SpiralMatrix__buttons}>
-        <ButtonExercises
-          onClick={() => handleStart(Number(size), setSize, setMatrix)}
-          isClear={false}
-        />
-        <ButtonExercises
-          onClick={() => handleClear(setSize, setMatrix)}
-          isClear={true}
-        />
+        <button onClick={() => handleStart(Number(size), setSize, setMatrix)}>
+          ▶️ Создать
+        </button>
+        <button onClick={() => handleClear(setSize, setMatrix)}>
+          🆑 Очистить
+        </button>
       </div>
 
       <div className={styles.SpiralMatrix__matrix}>

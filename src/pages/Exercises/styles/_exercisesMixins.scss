@@ -1,0 +1,9 @@
+@import "../../../styles/utils/mixins";
+
+@mixin exercises-input {
+  @include font-size($font-size-base);
+  width: 100%;
+  padding: rem(4);
+  box-sizing: border-box;
+  margin: rem(8) auto;
+}
