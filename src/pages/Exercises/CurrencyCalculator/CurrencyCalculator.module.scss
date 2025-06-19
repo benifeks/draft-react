@@ -3,16 +3,12 @@
 @import "../../../styles/utils/variables";
 @import "../styles/exercisesMixins";
 
-.SpiralMatrix {
+.currencyCalculator {
   &__input {
     @include exercises-input;
   }
 
   &__buttons {
     @include exercises-buttons;
-  }
-
-  &__matrix {
-    @include flex-center;
   }
 }

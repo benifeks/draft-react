@@ -2,24 +2,25 @@
 @import "../../../styles/utils/mixins";
 @import "../../../styles/utils/variables";
 
-.left-nav {
-  &__links {
-    display: flex;
-    justify-content: start;
-    gap: rem(16);
-    flex-shrink: 0;
-  }
+.rightNav {
+  display: flex;
+  gap: rem(16);
 
-  &__list {
+  &__pagesList {
     display: none;
   }
 
+  &__pages {
+    @include flex-around;
+    gap: rem(16);
+  }
+
   @media (max-width: $breakpoint-md) {
-    &__links {
+    &__pages {
       display: none;
     }
 
-    &__list {
+    &__pagesList {
       display: block;
     }
   }

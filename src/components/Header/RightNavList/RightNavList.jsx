@@ -1,14 +1,14 @@
-import "./RightNavList.scss";
-
 import React, { useState } from "react";
+
+import styles from "./RightNavList.module.scss";
 
 const RightNavList = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="right-nav-list">
+    <div className={styles.rightNavList}>
       <button
-        className="right-nav-list__toggle"
+        className={styles.rightNavList__toggle}
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
       >
@@ -16,7 +16,7 @@ const RightNavList = () => {
       </button>
 
       {isOpen && (
-        <ul className="right-nav-list__list">
+        <ul className={styles.rightNavList__list}>
           <li>
             <a href="/lab">Лаборатория</a>
           </li>

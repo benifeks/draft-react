@@ -14,6 +14,7 @@
   background-color: #fff;
   box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.1);
   gap: rem(16);
+  flex-shrink: 0;
 
   h3 {
     margin-bottom: 0;

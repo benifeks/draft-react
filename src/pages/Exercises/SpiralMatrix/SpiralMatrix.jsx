@@ -9,7 +9,10 @@ const SpiralMatrix = () => {
   const [matrix, setMatrix] = useState([]); // запас под визуализацию
 
   return (
-    <CardExercises title="Спиральная матрица" className={styles.SpiralMatrix}>
+    <CardExercises
+      title="Спиральная матрица 🌪️"
+      className={styles.SpiralMatrix}
+    >
       <input
         className={styles.SpiralMatrix__input}
         name="SpiralMatrixInput"
@@ -33,6 +36,7 @@ const SpiralMatrix = () => {
         <button onClick={() => handleStart(Number(size), setSize, setMatrix)}>
           ▶️ Создать
         </button>
+        <span>🌀</span>
         <button onClick={() => handleClear(setSize, setMatrix)}>
           🆑 Очистить
         </button>

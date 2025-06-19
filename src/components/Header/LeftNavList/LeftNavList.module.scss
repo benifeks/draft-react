@@ -2,10 +2,9 @@
 @import "../../../styles/utils/mixins";
 @import "../../../styles/utils/variables";
 
-.right-nav-list {
+.leftNav {
   position: relative;
-  display: inline-block;
-  // важно: чтобы список был относительно кнопки
+  display: inline-block; // важно: чтобы список был относительно кнопки
 
   &__toggle {
     @include font-size($font-size-base);

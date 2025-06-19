@@ -1,10 +1,10 @@
-import "./Logo.scss";
-
 import React from "react";
+
+import styles from "./Logo.module.scss";
 
 const Logo = () => {
   return (
-    <a href="/" className="nav__left-nav--logo" lang="en">
+    <a href="/" className={styles.nav__leftNavLogo} lang="en">
       <span>🏠</span>Home
     </a>
   );

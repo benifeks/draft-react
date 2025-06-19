@@ -1,19 +1,18 @@
-import "./LinkAngular.scss";
-
 import React from "react";
 
 import symbolDefs from "../../../assets/images/svg/technologies/symbol-defs.svg";
+import styles from "./LinkAngular.module.scss";
 
 const LinkAngular = () => {
   return (
-    <div className="link-angular">
+    <div className={styles.linkAngular}>
       <a
         href="https://github.com/benifeks/study-angular"
         target="_blank"
         rel="noopener noreferrer"
       >
         Этот же проект, но на
-        <svg className="link-angular--logo">
+        <svg className={styles.linkAngular__logo}>
           <use href={`${symbolDefs}#icon-angular`} />
         </svg>
       </a>

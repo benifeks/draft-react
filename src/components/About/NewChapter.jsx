@@ -1,20 +1,21 @@
 import React from "react";
 
-import Card from "../../ui/Card/Card";
+import styles from "./About.module.scss";
 import aboutVariables from "./aboutText";
 
 const NewChapter = () => {
   return (
-    <article>
-      <Card
-        title={aboutVariables.article_2.articleTitle}
-        description={aboutVariables.article_2.message}
-        image={aboutVariables.article_2.imageUrl}
-        link={aboutVariables.article_2.imageAlt}
-        className={`about__container--card`}
-      >
-        {aboutVariables.article_2.children}
-      </Card>
+    <article className={styles.about__containerCard}>
+      <h3>{aboutVariables.article_2.articleTitle}</h3>
+      <div className={styles.about__imageWrapper}>
+        <img
+          src={aboutVariables.article_2.imageUrl}
+          alt={aboutVariables.article_2.imageAlt || "card image"}
+          className={styles.about__image}
+        />
+      </div>
+      <p>{aboutVariables.article_2.message}</p>
+      {aboutVariables.article_2.children}
     </article>
   );
 };

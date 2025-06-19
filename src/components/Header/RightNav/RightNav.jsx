@@ -1,16 +1,15 @@
-import "./RightNav.scss";
-
 import React from "react";
 
 import RightNavList from "../RightNavList/RightNavList";
+import styles from "./RightNav.module.scss";
 
 const RightNav = () => {
   return (
-    <nav className="right-nav">
-      <div className="right-nav__pages-list">
+    <nav className={styles.rightNav}>
+      <div className={styles.rightNav__pagesList}>
         <RightNavList />
       </div>
-      <ul className="right-nav__pages">
+      <ul className={styles.rightNav__pages}>
         <li>
           <a href="/lab">Лаборатория</a>
         </li>

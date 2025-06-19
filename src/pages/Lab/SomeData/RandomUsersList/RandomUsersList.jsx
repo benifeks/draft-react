@@ -1,5 +1,7 @@
-import React from "react";
 import "./RandomUsersList.scss";
+
+import React from "react";
+
 import DeleteServerButton from "../DeleteServerButton/DeleteServerButton";
 
 const RandomUsersList = ({ users, deleteUser }) => {

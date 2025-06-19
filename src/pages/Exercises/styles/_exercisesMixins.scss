@@ -7,3 +7,8 @@
   box-sizing: border-box;
   margin: rem(8) auto;
 }
+
+@mixin exercises-buttons {
+  @include flex-between;
+  gap: rem(8);
+}

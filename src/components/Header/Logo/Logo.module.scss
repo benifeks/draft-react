@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins";
 @import "../../../styles/utils/variables";
 
-.nav__left-nav--logo {
+.nav__leftNavLogo {
   @include font-size($font-size-xl);
   display: inline-flex;
   align-items: center;

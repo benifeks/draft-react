@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins";
 @import "../../../styles/utils/variables";
 
-.link-angular {
+.linkAngular {
   @include flex-center;
   gap: rem(8);
   margin-top: rem(32);
@@ -22,7 +22,7 @@
     }
   }
 
-  &--logo {
+  &__logo {
     width: rem(32);
     height: rem(32);
 

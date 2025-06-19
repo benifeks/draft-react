@@ -1,9 +1,9 @@
-import "./Footer.scss";
-
 import React from "react";
 import { BsFacebook } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -12,9 +12,9 @@ const Footer = () => {
   };
 
   return (
-    <section className="footer" id="footer">
-      <nav className="footer__info">
-        <ul className="footer__info--section">
+    <section className={styles.footer} id="footer">
+      <nav className={styles.footer__info}>
+        <ul className={styles.footer__infoSection}>
           <li>
             <h4>Контакты</h4>
           </li>
@@ -33,13 +33,13 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <ul className="footer__info--section">
+        <ul className={styles.footer__infoSection}>
           <li>
             <h4>Социальные сети</h4>
           </li>
           <li>
             <a
-              className="accent"
+              className={styles.accent}
               href="https://facebook.com/skurko.sergej.2025/"
               target="_blank"
               rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              className="accent"
+              className={styles.accent}
               href="https://t.me/benifeks"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <div className="footer__bottom">
+      <div className={styles.footer__bottom}>
         <p>
           &copy; {new Date().getFullYear()} <span lang="en">Portfolio.</span>
           Все права защищены.

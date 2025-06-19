@@ -12,7 +12,7 @@
     padding: rem(16) 0;
     align-items: start;
 
-    &--section {
+    &Section {
       @include flex-column;
       gap: rem(8);
 
@@ -27,7 +27,7 @@
       }
     }
 
-    &--section .accent {
+    &Section .accent {
       font-size: rem(24);
     }
 

@@ -3,7 +3,7 @@
 @import "../../styles/utils/variables";
 
 .technologies {
-  &__title--h3 {
+  &__title {
     @include flex-center;
     gap: rem(12);
 
@@ -30,7 +30,7 @@
       gap: rem(24);
     }
 
-    &--block {
+    &Block {
       @include flex-between;
       gap: rem(64);
 
@@ -47,7 +47,7 @@
       }
     }
 
-    &--icon-logo {
+    &Icon__Logo {
       width: rem(56);
       height: rem(56);
 

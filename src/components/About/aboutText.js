@@ -1,6 +1,7 @@
 import my_foto_1 from "../../assets/images/about/my_foto_1.jpg";
 import my_foto_2 from "../../assets/images/about/my_foto_2.jpg";
 import sprite from "../../assets/images/about/symbol-defs.svg";
+import styles from "./About.module.scss";
 
 const aboutVariables = {
   aboutTitle: "Немного о себе",
@@ -12,7 +13,7 @@ const aboutVariables = {
     imageAlt: "photo of miner",
     message: `Мне 53, за плечами 20 лет под землёй — шахтёрская закалка, пыль, усталость и простые радости вроде кофе после смены. Теперь всё иначе: больше солнца, больше времени, и даже фронтенд-разработка вошла в жизнь. Шахтёр внутри, но живу уже по-другому — тем, что действительно радует.`,
     children: (
-      <svg className="about__container--card__svg">
+      <svg className={styles.about__containerCard__svg}>
         <use href={`${sprite}#icon-GlitchMiner`} />
       </svg>
     ),
@@ -24,7 +25,7 @@ const aboutVariables = {
     imageAlt: "photo of man with laptop",
     message: `Когда шахта осталась позади, я понял — без дела не могу. Начал изучать фронтенд, втянулся: JavaScript, сайты, технологии. Теперь учусь и надеюсь не просто понимать, а работать в этой сфере. Верю,что возраст — не помеха, если есть интерес и движение вперёд.`,
     children: (
-      <svg className="about__container--card__svg">
+      <svg className={styles.about__containerCard__svg}>
         <use href={`${sprite}#icon-characters_operator`} />
       </svg>
     ),

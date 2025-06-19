@@ -2,7 +2,7 @@
 @import "../../styles/utils/mixins";
 @import "../../styles/utils/variables";
 
-.js-in-practice {
+.jsInPractice {
   .article {
     @include flex-column;
     @include font-size($font-size-xl);
@@ -17,7 +17,7 @@
   &__container {
     @include flex-around;
 
-    &--columns {
+    &Columns {
       @include flex-column;
       gap: rem(16);
 
@@ -26,7 +26,7 @@
         border-radius: rem(8);
         padding: rem(16);
 
-        &--btn {
+        &Btn {
           background-color: $secondary-color;
           color: $text-light;
           padding: rem(6) rem(12);
@@ -37,7 +37,7 @@
           transition: background-color 0.3s ease;
         }
 
-        &--btn:hover {
+        &Btn:hover {
           color: $text-color;
           background-color: $primary-color;
         }
@@ -51,6 +51,7 @@
 
     @media (max-width: $breakpoint-md) {
       @include flex-column;
+      gap: rem(8);
     }
   }
 }

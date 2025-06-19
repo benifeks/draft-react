@@ -1,6 +1,8 @@
-import React, { useMemo, useState } from "react";
-import { useFetch } from "../../../../hooks/useFetch"; // Кастомный хук для загрузки данных
 import "./RandomUser.scss";
+
+import React, { useMemo, useState } from "react";
+
+import useFetch from "../../../../hooks/useFetch"; // Кастомный хук для загрузки данных
 import { callToPostServerData } from "../../../../services/api/utils/callToPostServerData"; // Функция отправки данных на сервер
 
 const RandomUser = ({ addUser }) => {
@@ -84,7 +86,7 @@ const RandomUser = ({ addUser }) => {
 export default RandomUser;
 
 // import React, { useMemo, useState } from "react";
-// import { useFetch } from "../../../../hooks/useFetch"; // Кастомный хук для загрузки данных
+
 // import "./RandomUser.scss";
 // import { callToPostServerData } from "../../../../services/api/utils/callToPostServerData"; // Функция отправки данных на сервер
 

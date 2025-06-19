@@ -1,6 +1,5 @@
 import "swiper/css";
 import "swiper/css/pagination";
-import "./WebsiteLayout.scss"; // обычный SCSS файл
 
 import React from "react";
 

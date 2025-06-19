@@ -1,14 +1,14 @@
-import "./Contacts.scss";
-
 import React from "react";
 import { BsFacebook, BsTelegram } from "react-icons/bs";
 
+import styles from "./Contacts.module.scss";
+
 const Contacts = () => {
   return (
-    <ul className="contacts">
+    <ul className={styles.contacts}>
       <li>
         <a
-          className="accent"
+          className={styles.accent}
           href="https://facebook.com/skurko.sergej.2025/"
           target="_blank"
           rel="noopener noreferrer"
@@ -18,7 +18,7 @@ const Contacts = () => {
       </li>
       <li>
         <a
-          className="accent"
+          className={styles.accent}
           href="https://t.me/benifeks"
           target="_blank"
           rel="noopener noreferrer"

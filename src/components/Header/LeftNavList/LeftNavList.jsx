@@ -1,7 +1,7 @@
-import "./LeftNavList.scss";
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./LeftNavList.module.scss";
 
 const LeftNavList = () => {
   const navigate = useNavigate();
@@ -13,9 +13,9 @@ const LeftNavList = () => {
   };
 
   return (
-    <div className="left-nav">
+    <div className={styles.leftNav}>
       <button
-        className="left-nav-list__toggle"
+        className={styles.leftNav__toggle}
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
       >
@@ -23,7 +23,7 @@ const LeftNavList = () => {
       </button>
 
       {isOpen && (
-        <ul className="left-nav-list__list">
+        <ul className={styles.leftNav__list}>
           <li>
             <a href="#about" onClick={() => goToHomeAnchor("about")}>
               Обо мне

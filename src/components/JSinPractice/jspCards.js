@@ -1,25 +1,15 @@
 export const cardsData = {
   tasks: [
     {
-      title: "Задача 1",
-      description: "Описание первой задачи",
-      link: "/exercises",
-    },
-    {
-      title: "Задача 2",
-      description: "Описание второй задачи",
+      title: "Задачи",
+      description: "Мини-задачи по JavaScript",
       link: "/exercises",
     },
   ],
   projects: [
     {
-      title: "Проект 1",
-      description: "Описание первого проекта",
-      link: "/projects",
-    },
-    {
-      title: "Проект 2",
-      description: "Описание второго проекта",
+      title: "Проекты",
+      description: "Мини-проекты для практики",
       link: "/projects",
     },
   ],

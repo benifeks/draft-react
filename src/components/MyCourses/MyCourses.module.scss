@@ -2,12 +2,12 @@
 @import "../../styles/utils/mixins";
 @import "../../styles/utils/variables";
 
-.my-courses {
+.myCourses {
   &__container {
     @include flex-around;
     gap: rem(2);
 
-    &--item {
+    &__item {
       @include flex-column;
       @include font-size($font-size-large);
       gap: rem(8);
@@ -16,11 +16,11 @@
       padding: rem(8);
       flex-shrink: 0;
 
-      &__icons {
+      &Icons {
         @include flex-around;
         gap: rem(8);
 
-        &--icon-logo {
+        &__iconLogo {
           width: 48px;
           height: 48px;
         }
@@ -38,7 +38,7 @@
   }
 }
 
-.external-link-button {
+.externalLinkButton {
   display: inline-block;
   padding: rem(6) rem(12);
   background-color: $secondary-color;

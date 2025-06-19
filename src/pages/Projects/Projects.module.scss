@@ -1,3 +1,12 @@
 @import "../../styles/utils/functions";
 @import "../../styles/utils/mixins";
 @import "../../styles/utils/variables";
+
+.projects {
+  margin-top: rem(100);
+
+  &Nav {
+    @include flex-center;
+    gap: rem(16);
+  }
+}

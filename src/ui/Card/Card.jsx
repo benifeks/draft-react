@@ -2,50 +2,32 @@ import React from "react";
 
 /**
  * @typedef {Object} CardProps
- * @property {string} [title] - Заголовок карточки
- * @property {string} [description] - Описание
- * @property {string} [image] - URL изображения
- * @property {string} [link] - Ссылка
- * @property {React.ReactNode} [children] - Дополнительный контент внутри карточки
- * @property {string} [className] - Дополнительные классы
+ * @property {string} [title]
+ * @property {string} [description]
+ * @property {string} [image]
+ * @property {string} [link]
+ * @property {string} [className]
+ * @property {React.ReactNode} [children]
  */
 
 /**
- * @param {{
- *   title?: string,
- *   description?: string,
- *   link?: string,
- *   className?: string,
- *   children?: React.ReactNode
- * }} props
+ * @param {CardProps & React.HTMLAttributes<HTMLElement>} props
  */
-
 export const Card = ({
   title,
   description,
   image,
   link,
-  children,
   className = "",
+  children,
+  ...restProps
 }) => {
   return (
-    <article
-      href={link}
-      className={`card ${className}`}
-      target={link ? "_blank" : undefined}
-      rel="noopener noreferrer"
-    >
+    <article className={`card ${className}`} {...restProps}>
       {title && <h3 className="card-title">{title}</h3>}
-      <div className="image-wrapper">
-        {image && (
-          <img
-            src={image}
-            alt={title || "card image"}
-            className="image-wrapper__image"
-          />
-        )}
-      </div>
+
       {description && <p className="card-description">{description}</p>}
+
       {children}
     </article>
   );

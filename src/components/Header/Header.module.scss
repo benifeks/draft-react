@@ -20,7 +20,7 @@
     }
   }
 
-  &__right-nav {
+  &__rightNav {
     @include flex-around;
     gap: rem(16);
     flex-shrink: 0;

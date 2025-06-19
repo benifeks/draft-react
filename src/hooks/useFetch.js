@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Кастомный хук useFetch — выполняет GET-запрос и управляет состояниями: data, loading, error
-export function useFetch(url, options = {}) {
+export default function useFetch(url, options = {}) {
   // Состояние для полученных данных
   const [data, setData] = useState(null);
   // Состояние загрузки

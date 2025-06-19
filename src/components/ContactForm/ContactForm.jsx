@@ -1,7 +1,7 @@
-import "./ContactForm.scss";
-
 import emailjs from "emailjs-com";
 import React, { useState } from "react";
+
+import styles from "./ContactForm.module.scss";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -38,14 +38,14 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-form" id="contact-form">
+    <section className={styles["contact-form"]} id="contact-form">
       <h2>Свяжитесь со мной</h2>
       <h3>🎉 Жду Ваших букв! 🥳</h3>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className={styles["form"]} onSubmit={handleSubmit}>
         <label>
           Ваш email:
           <input
-            className="input"
+            className={styles["input"]}
             type="email"
             name="user_email"
             value={formData.user_email}
@@ -57,7 +57,7 @@ const ContactForm = () => {
         <label>
           Ваше сообщение:
           <textarea
-            className="textarea"
+            className={styles["textarea"]}
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -66,17 +66,21 @@ const ContactForm = () => {
           />
         </label>
 
-        <button className="button" type="submit">
+        <button className={styles["button"]} type="submit">
           Отправить
         </button>
 
         {status && (
           <p
-            className={`status ${
-              status.includes("Сообщение отправлено успешно!")
-                ? "success"
-                : "error"
-            }`}
+            className={
+              styles[
+                `status ${
+                  status.includes("Сообщение отправлено успешно!")
+                    ? "success"
+                    : "error"
+                }`
+              ]
+            }
             onClick={() => setStatus("")}
           >
             {status}
