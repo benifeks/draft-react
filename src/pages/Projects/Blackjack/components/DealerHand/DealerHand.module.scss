@@ -1,0 +1,8 @@
+@import "../../../../../styles/utils/functions";
+
+.hand {
+  &Card {
+    width: rem(100);
+    height: rem(140);
+  }
+}

@@ -54,4 +54,23 @@ template_aet7agt - это ID шаблона
 │   └── Blackjack.jsx
 ├── Table/
 │   └── Table.jsx
-                
+;  =========================================================
+
+/pages/Projects/Blackjack/
+│
+├── Blackjack.jsx          # Главный компонент страницы (роут)
+├── components/
+│   ├── GameTable.jsx      # Визуальный стол, карточки, игроки
+│   ├── Controls.jsx       # Кнопки: "Взять", "Стоп", "Начать игру"
+│   ├── PlayerHand.jsx     # Рука игрока
+│   ├── DealerHand.jsx     # Рука дилера
+│   └── ScoreBoard.jsx     # Очки, сообщение о победе/проигрыше
+│
+├── hooks/
+│   └── useBlackjack.js    # Основной хук с логикой (очистка, счёт, финал и т.п.)
+│
+├── utils/
+│   └── deckApi.js         # Получение/тасовка колоды через API
+│
+├── styles/
+│   └── blackjack.module.scss  # Стили (UI, адаптив)
