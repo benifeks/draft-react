@@ -1,0 +1,33 @@
+@import "./_blackjack-variables.scss";
+
+@mixin bj-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bj-card-style {
+  width: $bj-card-width;
+  height: $bj-card-height;
+  border-radius: $bj-border-radius;
+  background-color: $bj-card-bg;
+  border: 1px solid $bj-card-border;
+  transition: transform $bj-transition;
+}
+
+@mixin bj-table-bg {
+  background-color: $bj-bg;
+}
+
+@mixin bj-score {
+  font-family: $bj-font-family;
+  font-weight: bold;
+  font-size: rem(20);
+  color: $bj-text-light;
+}
+
+@mixin bj-card-hover {
+  &:hover {
+    transform: scale(1.05);
+  }
+}

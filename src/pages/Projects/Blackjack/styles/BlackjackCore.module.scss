@@ -1,0 +1,48 @@
+@import "../styles/blackjack-mixins";
+@import "../styles/blackjack-variables";
+@import "../styles/animations";
+@import "../../../../styles/utils/mixins";
+@import "../../../../styles/utils/variables";
+
+.blackjackCore {
+  padding: rem(32);
+
+  @media (max-width: $breakpoint-md) {
+    padding: rem(24);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: rem(16);
+  }
+}
+
+.blackjackCoreList {
+  @include flex-column;
+  gap: rem(24);
+  padding: rem(24);
+  background-color: $bj-bg;
+  border-radius: $bj-border-radius;
+  box-shadow: 0 0 rem(6) rgba(0, 0, 0, 0.25);
+  list-style: none;
+  color: $bj-text-light;
+  font-family: $bj-font-family;
+
+  background: radial-gradient(
+    ellipse at center,
+    mix($bj-accent, $bj-bg, 10%) 0%,
+    $bj-bg 45%,
+    darken($bj-bg, 6%) 100%
+  );
+
+  animation: candleGlow 4s ease-in-out infinite;
+
+  @media (max-width: $breakpoint-md) {
+    gap: rem(16);
+    padding: rem(16);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    gap: rem(12);
+    padding: rem(12);
+  }
+}
