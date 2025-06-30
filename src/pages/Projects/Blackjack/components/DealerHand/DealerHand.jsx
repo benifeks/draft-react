@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./DealerHand.module.scss";
 
-const DealerHand = ({ cards = [], revealed = false }) => {
+const DealerHand = ({ cards = [], revealed }) => {
   return (
     <div className={styles.hand}>
       {cards.map((card, i) =>

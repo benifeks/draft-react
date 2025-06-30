@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 
-import CardBackStack from "./components/CardBackStack/CardBackStack";
 import DealerHand from "./components/DealerHand/DealerHand";
 import DrawCardButton from "./components/DrawCardButton/DrawCardButton";
 import GameStatus from "./components/GameStatus/GameStatus";
@@ -78,18 +77,27 @@ const BlackjackCore = () => {
 
   // 🧪 Проверяем начальный результат — один раз
   useEffect(() => {
-    if (
-      playerCards.length === 2 &&
-      dealerCards.length === 2 &&
-      !isInitialResultSet
-    ) {
+    if (playerCards.length === 2 && dealerCards.length === 2) {
       const pScore = calculateScore(playerCards);
       const dScore = calculateScore(dealerCards);
 
       checkInitialGameResult(pScore, dScore);
-      setIsInitialResultSet(true);
+
+      if (!isInitialResultSet) {
+        setIsInitialResultSet(true);
+      }
+
+      if (dScore === 21) {
+        setIsDealerRevealed(true);
+      }
     }
-  }, [playerCards, dealerCards, isInitialResultSet, setIsInitialResultSet]);
+  }, [
+    playerCards,
+    dealerCards,
+    isInitialResultSet,
+    setIsInitialResultSet,
+    setIsDealerRevealed,
+  ]);
 
   const onDrawCard = () => {
     handleDrawCard({
@@ -121,18 +129,6 @@ const BlackjackCore = () => {
     <section className={styles.blackjackCore}>
       <h2 className={styles.title}>Blackjack</h2>
       <ul className={styles.blackjackCoreList}>
-        <li className={styles.controls}>
-          <StartGameButton
-            onStart={handleStartGame}
-            disabled={isStartDisabled}
-          />
-          <DrawCardButton onDraw={onDrawCard} disabled={isDrawDisabled} />
-          <PassButton onClick={onPassClick} disabled={isPassDisabled} />
-        </li>
-        <li className={styles.hands}>
-          <PlayerHand cards={playerCards} />
-          <DealerHand cards={dealerCards} revealed={isDealerRevealed} />
-        </li>
         <li className={styles.gameStatus}>
           <GameStatus
             playerScore={playerScore}
@@ -140,10 +136,17 @@ const BlackjackCore = () => {
             gameResult={gameResult}
           />
         </li>
-        <li className={styles.cardBackStack}>
-          <CardBackStack
-            count={deckId ? 52 - (playerCards.length + dealerCards.length) : 52}
+        <li className={styles.hands}>
+          <PlayerHand cards={playerCards} />
+          <DealerHand cards={dealerCards} revealed={isDealerRevealed} />
+        </li>
+        <li className={styles.controls}>
+          <StartGameButton
+            onStart={handleStartGame}
+            disabled={isStartDisabled}
           />
+          <DrawCardButton onDraw={onDrawCard} disabled={isDrawDisabled} />
+          <PassButton onClick={onPassClick} disabled={isPassDisabled} />
         </li>
       </ul>
     </section>

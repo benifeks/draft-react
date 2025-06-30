@@ -18,7 +18,7 @@ const RightNavList = () => {
       {isOpen && (
         <ul className={styles.rightNavList__list}>
           <li>
-            <a href="/lab">Лаборатория</a>
+            <a href="/projects">мини-проекты</a>
           </li>
           <li>
             <a href="/exercises">Задачи</a>

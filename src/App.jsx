@@ -16,7 +16,6 @@ import Bakery from "./pages/Bakery/Bakery";
 import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
 import Exercises from "./pages/Exercises/Exercises";
 import GGPromarket from "./pages/GGPromarket/GGPromarket";
-import Lab from "./pages/Lab/Lab";
 import Blackjack from "./pages/Projects/Blackjack/Blackjack";
 import Homeprojects from "./pages/Projects/Homeprojects/Homeprojects";
 import Projects from "./pages/Projects/Projects";
@@ -46,13 +45,11 @@ function App() {
                 </>
               }
             />
-            <Route path="/lab" element={<Lab />} />
             <Route path="/exercises" element={<Exercises />} />
             <Route path="/bakery" element={<Bakery />} />
             <Route path="/ggpromarket" element={<GGPromarket />} />
             <Route path="/beauty-zone" element={<BeautyZone />} />
             <Route path="/blackjack" element={<Blackjack />} />
-            <Route path="/table" element={<Table />} />{" "}
             {/* Вложенные маршруты для projects */}
             <Route path="/projects" element={<Projects />}>
               <Route index element={<Homeprojects />} />{" "}

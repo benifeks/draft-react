@@ -13,8 +13,6 @@ const Exercises = () => {
         <GuessNumber />
         <SpiralMatrix />
         <CurrencyCalculator />
-        <CurrencyCalculator />
-        <CurrencyCalculator />
       </div>
     </section>
   );

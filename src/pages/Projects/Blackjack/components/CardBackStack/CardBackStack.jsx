@@ -13,7 +13,11 @@ const CardBackStack = ({ count = 5 }) => {
           src="https://deckofcardsapi.com/static/img/back.png"
           alt="Card back"
           className={styles.stackCard}
-          style={{ top: `${i * 0.2}px`, left: `${i * 0.2}px` }}
+          style={{
+            top: `${i * 0.2}px`,
+            left: `${i * 0.2}px`,
+            rotate: `${i * 5}deg`,
+          }}
         />
       ))}
     </div>

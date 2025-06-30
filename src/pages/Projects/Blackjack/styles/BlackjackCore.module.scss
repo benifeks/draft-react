@@ -5,14 +5,14 @@
 @import "../../../../styles/utils/variables";
 
 .blackjackCore {
-  padding: rem(32);
+  padding: rem(24);
 
   @media (max-width: $breakpoint-md) {
-    padding: rem(24);
+    padding: rem(16);
   }
 
   @media (max-width: $breakpoint-sm) {
-    padding: rem(16);
+    padding: rem(12);
   }
 }
 
@@ -44,5 +44,33 @@
   @media (max-width: $breakpoint-sm) {
     gap: rem(12);
     padding: rem(12);
+  }
+}
+
+.controls {
+  @include flex-center;
+  gap: rem(12);
+
+  @media (max-width: $breakpoint-sm) {
+    @include flex-column;
+    gap: rem(10);
+    width: 100%;
+  }
+}
+
+.drawCardButton {
+  @include flex-center;
+}
+
+.hands {
+  @include bj-flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: rem(150);
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20);
   }
 }

@@ -11,7 +11,7 @@ const RightNav = () => {
       </div>
       <ul className={styles.rightNav__pages}>
         <li>
-          <a href="/lab">Лаборатория</a>
+          <a href="/projects">мини-проекты</a>
         </li>
         <li>
           <a

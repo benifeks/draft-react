@@ -1,6 +1,6 @@
 // Импортируем модули для работы с путями и файловой системой
-import path from "path";
 import { promises as fs } from "fs";
+import path from "path";
 
 // Основной обработчик запроса
 export default async function handler(req, res) {
