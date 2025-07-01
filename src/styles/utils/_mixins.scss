@@ -9,11 +9,11 @@
 @mixin neucha {
   font-family: $font-family-secondary;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: rem(5);
 }
 // wrapper
 @mixin wrapper {
-  max-width: 1400px;
+  max-width: rem(1400);
   margin: 0 auto;
 }
 // links

@@ -1,0 +1,23 @@
+.listWrapper {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #f5faff;
+  border: 1px solid #b0c4de;
+  border-radius: 6px;
+}
+
+.userList {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.userList li {
+  margin-bottom: 0.25rem;
+}
+
+.empty {
+  font-style: italic;
+  color: #888;
+  margin-top: 1rem;
+}

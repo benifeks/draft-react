@@ -107,10 +107,3 @@ src/
 
 ; ================================================
 
-src/
-└── pages/
-    └── Projects/
-        ├── Projects.jsx
-        └── Table/
-            ├── Table.jsx
-            └── Table.module.scss
