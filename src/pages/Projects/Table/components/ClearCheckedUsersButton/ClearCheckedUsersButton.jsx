@@ -15,7 +15,9 @@ const ClearCheckedUsersButton = () => {
 
   return (
     <button className={styles.button} onClick={handleClear}>
-      Очистить выбранных
+      Очистить
+      <br />
+      выбранных
     </button>
   );
 };

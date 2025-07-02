@@ -3,8 +3,11 @@
 @import "../../styles/utils/variables";
 
 .projects {
-  margin-top: rem(100);
+  margin-top: rem(70);
 
+  @media (max-width: $breakpoint-sm) {
+    margin-top: rem(120);
+  }
   &Nav {
     @include flex-center;
     gap: rem(16);

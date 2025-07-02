@@ -17,7 +17,9 @@ const LoadUsersButton = ({ countUsers = 1 }) => {
 
   return (
     <button type="button" className={styles.button} onClick={handleClick}>
-      Добавить пользователя
+      Добавить
+      <br />
+      пользователя
     </button>
   );
 };

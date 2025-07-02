@@ -15,7 +15,9 @@ const ClearUsersButton = () => {
 
   return (
     <button type="button" className={styles.button} onClick={handleClear}>
-      Очистить пользователей
+      Очистить
+      <br />
+      пользователей
     </button>
   );
 };

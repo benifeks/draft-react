@@ -11,13 +11,21 @@ import styles from "./Table.module.scss";
 const Table = () => {
   return (
     <section className={styles.table}>
-      <h2>Таблица пользователей</h2>
+      <h2 className={styles.title}>Таблица пользователей</h2>
       <TableProvider>
-        <LoadUsersButton />
-        <ClearUsersButton />
-        <UsersTable />
+        <ul className={styles.blocksList}>
+          <li className={`${styles.blockItem} ${styles.blockButtons}`}>
+            <LoadUsersButton />
+            <ClearUsersButton />
+          </li>
+          <li className={styles.blockItem}>
+            <UsersTable />
+          </li>
+          <li className={styles.blockItem}>
+            <CheckedUsersList />
+          </li>
+        </ul>
         <UserDetailsCard />
-        <CheckedUsersList />
       </TableProvider>
     </section>
   );

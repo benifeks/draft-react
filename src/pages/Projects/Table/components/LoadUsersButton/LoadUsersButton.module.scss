@@ -1,0 +1,8 @@
+@use "sass:color";
+
+@import "../../styles/mixinsTable";
+@import "../../styles/variablesTable";
+
+.button {
+  @include table-button($color-primary, $color-surface, $color-primary-light);
+}

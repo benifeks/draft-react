@@ -1,37 +1,53 @@
+@import "../../../../../styles/utils/functions";
+
+.swiper {
+  width: 100%;
+  max-width: 100%;
+}
+
 .slide {
   display: flex;
   justify-content: center;
+  min-width: rem(240);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .card {
   background: #fff;
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: rem(8);
+  padding: rem(16);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 280px;
+  max-width: rem(280);
   text-align: center;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .controls {
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: rem(8);
+  margin-bottom: rem(8);
+  align-self: flex-end;
 }
 
 .avatar {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 0.5rem;
+  width: rem(80);
+  height: rem(80);
+  margin-bottom: rem(8);
   object-fit: cover;
 }
 
 h4 {
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 rem(12) 0;
   font-weight: 600;
+  font-size: rem(16);
 }
 
 .infoList {
@@ -39,12 +55,13 @@ h4 {
   padding: 0;
   margin: 0;
   text-align: left;
+  width: 100%;
 
   li {
-    margin-bottom: 0.4rem;
-    font-size: 0.9rem;
+    margin-bottom: rem(6);
+    font-size: rem(14);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: rem(8);
   }
 }
