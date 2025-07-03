@@ -10,6 +10,7 @@ const Projects = () => {
         <NavLink to="/projects">🃏 Projects</NavLink>
         <NavLink to="blackjack">🃏 Blackjack</NavLink>
         <NavLink to="table">📊 Table</NavLink>
+        <NavLink to="quicknotes">📝 QuickNotes</NavLink>
       </nav>
 
       <div className={styles.projectsContainer}>

@@ -19,6 +19,7 @@ import GGPromarket from "./pages/GGPromarket/GGPromarket";
 import Blackjack from "./pages/Projects/Blackjack/Blackjack";
 import Homeprojects from "./pages/Projects/Homeprojects/Homeprojects";
 import Projects from "./pages/Projects/Projects";
+import QuickNotes from "./pages/Projects/QuickNotes/QuickNotes";
 import Table from "./pages/Projects/Table/Table";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
               {/* index и есть стартовая Homeprojects*/}
               <Route path="blackjack" element={<Blackjack />} />
               <Route path="table" element={<Table />} />
+              <Route path="quicknotes" element={<QuickNotes />} />
             </Route>
           </Routes>
         </main>
