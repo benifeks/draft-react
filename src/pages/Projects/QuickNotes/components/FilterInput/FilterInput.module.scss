@@ -1,0 +1,53 @@
+@import "../../../../../styles/utils/functions";
+@import "../../../../../styles/utils/mixins";
+@import "../../../../../styles/utils/variables";
+@import "../../styles/variablesNotes";
+
+.filterWrapper {
+  position: relative;
+  margin: rem(20) 0;
+}
+
+.filterInput {
+  width: 100%;
+  padding: rem(10) rem(36) rem(10) rem(12);
+  border: 1px solid $note-border-color;
+  border-radius: rem(6);
+  background-color: $secondary-color;
+  color: $text-color;
+  @include font-size(16);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.clearButton {
+  position: absolute;
+  right: rem(8);
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: rem(16);
+  color: $text-muted;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $danger-color;
+  }
+}
+
+/* Адаптив */
+@media (max-width: $breakpoint-sm) {
+  .filterInput {
+    padding: rem(10) rem(32) rem(10) rem(10);
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../../../../styles/utils/functions";
+@import "../../../../../styles/utils/mixins";
+@import "../../../../../styles/utils/variables";
+@import "../../styles/variablesNotes";
+
+.noteItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(12) rem(16);
+  background-color: $note-bg-color;
+  border: 1px solid $note-border-color;
+  box-shadow: $note-shadow;
+  border-radius: rem(8);
+  margin-bottom: rem(12);
+  transition: background-color $transition-duration;
+
+  &:hover {
+    background-color: lighten($note-bg-color, 3%);
+  }
+}
+
+.text {
+  flex: 1;
+  margin: 0 rem(12);
+  color: $text-color;
+  font-size: rem(16);
+  word-break: break-word;
+}
+
+.deleteButton {
+  background: transparent;
+  border: none;
+  color: $danger-color;
+  font-size: rem(18);
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .noteItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(8);
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  .deleteButton {
+    align-self: flex-end;
+  }
+}

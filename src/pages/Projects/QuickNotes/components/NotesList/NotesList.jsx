@@ -1,3 +1,4 @@
+// src / pages / Projects / QuickNotes / components / NotesList / NotesList.jsx;
 import React, { useContext } from "react";
 
 import { NotesContext } from "../../context/NotesContext";

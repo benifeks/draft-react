@@ -1,0 +1,71 @@
+@import "../../styles/_variablesNotes.scss";
+@import "../../../../../styles/utils/mixins";
+
+.notesList {
+  padding: rem(20);
+  background-color: $note-bg-color;
+  border-radius: rem(8);
+  box-shadow: $note-shadow;
+  margin-top: rem(24);
+}
+
+.title {
+  @include font-size(20);
+  font-weight: bold;
+  margin-bottom: rem(16);
+  color: $text-color;
+  text-transform: uppercase;
+  letter-spacing: rem(1.5);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+}
+
+.clearButton {
+  margin-top: rem(20);
+  padding: rem(8) rem(16);
+  background-color: $danger-color;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: rem(4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($danger-color, 10%);
+  }
+}
+
+.empty {
+  margin-top: rem(20);
+  padding: rem(16);
+  border: 1px dashed $text-muted;
+  background-color: lighten($secondary-color, 8%);
+  text-align: center;
+  font-style: italic;
+  color: $text-muted;
+  border-radius: rem(6);
+}
+
+/* Адаптив */
+@media (max-width: $breakpoint-sm) {
+  .notesList {
+    padding: rem(12);
+  }
+
+  .title {
+    @include font-size(18);
+    text-align: center;
+  }
+
+  .clearButton {
+    width: 100%;
+  }
+}

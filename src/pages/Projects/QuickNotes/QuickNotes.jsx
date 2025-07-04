@@ -1,3 +1,4 @@
+// src/pages/Projects/QuickNotes/QuickNotes.jsx
 import React from "react";
 
 import FilterInput from "./components/FilterInput/FilterInput";

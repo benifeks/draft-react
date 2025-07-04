@@ -1,0 +1,59 @@
+@import "../../../../../styles/utils/functions";
+@import "../../../../../styles/utils/mixins";
+@import "../../../../../styles/utils/variables";
+@import "../../styles/variablesNotes";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  margin-bottom: rem(20);
+}
+
+.textarea {
+  width: 100%;
+  padding: rem(10) rem(12);
+  font-size: rem(16);
+  font-family: inherit;
+  border: 1px solid $note-border-color;
+  border-radius: rem(6);
+  resize: vertical;
+  min-height: rem(80);
+  background-color: #fffdfd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color $transition-duration;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+.button {
+  align-self: flex-end;
+  padding: rem(8) rem(16);
+  font-size: rem(14);
+  font-weight: bold;
+  color: #fff;
+  background-color: $primary-color;
+  border: none;
+  border-radius: rem(4);
+  cursor: pointer;
+  transition: background-color $transition-duration;
+
+  &:hover {
+    background-color: darken($primary-color, 8%);
+  }
+
+  &:disabled {
+    background-color: lighten($primary-color, 20%);
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .button {
+    align-self: stretch;
+    text-align: center;
+  }
+}

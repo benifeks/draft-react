@@ -1,45 +1,111 @@
-/* src/components/Modal/Modal.module.scss */
+@import "../../../../../styles/utils/functions";
+@import "../../../../../styles/utils/mixins";
+@import "../../../../../styles/utils/variables";
+@import "../../styles/variablesNotes";
+
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  @include flex-center;
+  z-index: 1000;
 }
 
 .modal {
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  max-width: 600px;
+  background-color: $note-bg-color;
+  border-radius: rem(8);
+  padding: rem(24);
   width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
+  max-width: rem(600);
+  box-shadow: $note-shadow;
   position: relative;
+  @include flex-column;
+  gap: rem(16);
 }
 
 .closeButton {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  font-size: 1.5rem;
-  background: none;
+  top: rem(8);
+  right: rem(8);
+  background: transparent;
   border: none;
+  font-size: rem(20);
   cursor: pointer;
+  color: $text-muted;
+
+  &:hover {
+    color: $danger-color;
+  }
 }
 
 .content {
-  margin-top: 1.5rem;
+  width: 100%;
+  text-align: left;
 }
 
-.lastModified {
-  color: #666666;
-  font-style: italic;
-  font-size: 0.85rem;
-  margin-top: 1rem;
+.date {
+  @include font-size(14);
+  color: $text-muted;
+  margin-bottom: rem(8);
+}
+
+.editButton,
+.doneButton {
+  padding: rem(10) rem(16);
+  font-size: rem(16);
+  border-radius: rem(4);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &.editButton {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &.doneButton {
+    background-color: $primary-color;
+    color: white;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.textarea {
+  width: 100%;
+  padding: rem(12);
+  font-size: rem(16);
+  border-radius: rem(4);
+  border: 1px solid $note-border-color;
+  resize: vertical;
+  min-height: rem(100);
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .modal {
+    padding: rem(16);
+  }
+
+  .editButton,
+  .doneButton {
+    font-size: rem(14);
+    padding: rem(8) rem(12);
+  }
 }

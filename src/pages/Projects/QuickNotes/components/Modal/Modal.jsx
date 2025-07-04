@@ -1,3 +1,4 @@
+// src/pages/Projects/QuickNotes/components/Modal/Modal.jsx
 import React, { useContext, useEffect, useState } from "react";
 
 import { NotesContext } from "../../context/NotesContext";

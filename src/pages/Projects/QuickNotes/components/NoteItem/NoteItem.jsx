@@ -1,3 +1,4 @@
+// src/pages/Projects/QuickNotes/components/NoteItem/NoteItem.jsx
 import React from "react";
 
 import formatDate from "../../utils/formatDate"; // утилита форматирования даты

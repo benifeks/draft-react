@@ -13,7 +13,8 @@ const NoteForm = () => {
     e.preventDefault();
     const trimmed = note.trim();
     if (!trimmed) return;
-    setAllNotes([...allNotes, { id: Date.now(), text: trimmed }]);
+
+    setAllNotes([{ id: Date.now(), text: trimmed }, ...allNotes]);
     setNote("");
   };
 
