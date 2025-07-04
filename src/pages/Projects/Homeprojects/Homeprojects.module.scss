@@ -1,0 +1,25 @@
+@import "../../../styles/utils/functions";
+@import "../../../styles/utils/mixins";
+@import "../../../styles/utils/variables";
+
+.homeprojects {
+  padding: rem(24);
+  text-align: center;
+  color: $text-color;
+
+  @include flex-column;
+  gap: rem(16);
+}
+
+.title {
+  font-size: rem(32);
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.description {
+  @include font-size($font-size-base);
+  max-width: rem(800);
+  line-height: 1.6;
+  color: $text-color;
+}

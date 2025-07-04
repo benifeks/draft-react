@@ -4,12 +4,46 @@
 
 .projects {
   margin-top: rem(70);
+  padding: rem(16);
+  background-color: $background-light;
 
-  @media (max-width: $breakpoint-sm) {
-    margin-top: rem(120);
+  @media (max-width: $breakpoint-md) {
+    padding: rem(8);
+    margin-top: rem(100);
   }
-  &Nav {
-    @include flex-center;
-    gap: rem(16);
+}
+
+.projectsNav {
+  @include flex-around;
+  flex-wrap: wrap;
+  gap: rem(12);
+  border-radius: rem(8);
+  padding: rem(12);
+
+  a {
+    padding: rem(8) rem(12);
+    border-radius: rem(4);
+    background-color: lighten($primary-color, 15%);
+    color: $text-color;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    &.active {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
   }
+}
+
+.projectsContainer {
+  margin-top: rem(16);
+  border: rem(1) solid $primary-color;
+  border-radius: rem(8);
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
