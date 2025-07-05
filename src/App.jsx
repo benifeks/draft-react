@@ -11,11 +11,7 @@ import Hero from "./components/Hero/Hero";
 import JSinPractice from "./components/JSinPractice/JSinPractice";
 import MyCourses from "./components/MyCourses/MyCourses";
 import Technologies from "./components/Technologies/Technologies";
-import WebsiteLayout from "./components/WebsiteLayout/WebsiteLayout";
-import Bakery from "./pages/Bakery/Bakery";
-import BeautyZone from "./pages/Beauty-Zone/Beauty-Zone";
 import Exercises from "./pages/Exercises/Exercises";
-import GGPromarket from "./pages/GGPromarket/GGPromarket";
 import Blackjack from "./pages/Projects/Blackjack/Blackjack";
 import Homeprojects from "./pages/Projects/Homeprojects/Homeprojects";
 import Projects from "./pages/Projects/Projects";
@@ -38,7 +34,6 @@ function App() {
                   <Hero />
                   <About />
                   <Technologies />
-                  <WebsiteLayout />
                   <JSinPractice />
                   <MyCourses />
                   <ContactForm />
@@ -47,10 +42,6 @@ function App() {
               }
             />
             <Route path="/exercises" element={<Exercises />} />
-            <Route path="/bakery" element={<Bakery />} />
-            <Route path="/ggpromarket" element={<GGPromarket />} />
-            <Route path="/beauty-zone" element={<BeautyZone />} />
-            <Route path="/blackjack" element={<Blackjack />} />
             {/* Вложенные маршруты для projects */}
             <Route path="/projects" element={<Projects />}>
               <Route index element={<Homeprojects />} />{" "}

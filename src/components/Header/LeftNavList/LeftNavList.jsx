@@ -31,14 +31,6 @@ const LeftNavList = () => {
           </li>
           <li>
             <a
-              href="#website-layout"
-              onClick={() => goToHomeAnchor("website-layout")}
-            >
-              Вёрстка
-            </a>
-          </li>
-          <li>
-            <a
               href="#js-in-practice"
               onClick={() => goToHomeAnchor("js-in-practice")}
             >

@@ -21,7 +21,13 @@ const RightNavList = () => {
             <a href="/projects">мини-проекты</a>
           </li>
           <li>
-            <a href="/exercises">Задачи</a>
+            <a
+              href="https://github.com/benifeks/draft-react"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span lang="en">GitHub</span>
+            </a>
           </li>
         </ul>
       )}

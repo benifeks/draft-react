@@ -1,5 +1,6 @@
 import React from "react";
 
+import useScrollToHash from "../../../hooks/useScrollToHash";
 import CheckedUsersList from "./components/CheckedUsersList/CheckedUsersList";
 import ClearUsersButton from "./components/ClearUsersButton/ClearUsersButton";
 import LoadUsersButton from "./components/LoadUsersButton/LoadUsersButton";
@@ -9,8 +10,9 @@ import TableProvider from "./context/TableProvider";
 import styles from "./Table.module.scss";
 
 const Table = () => {
+  useScrollToHash();
   return (
-    <section className={styles.table}>
+    <section className={styles.table} id="table">
       <h2 className={styles.title}>Таблица пользователей</h2>
       <TableProvider>
         <ul className={styles.blocksList}>

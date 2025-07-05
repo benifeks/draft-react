@@ -26,22 +26,6 @@
         border-radius: rem(8);
         padding: rem(16);
 
-        &Btn {
-          background-color: $secondary-color;
-          color: $text-light;
-          padding: rem(6) rem(12);
-          border: none;
-          border-radius: rem(8);
-          cursor: pointer;
-          font-weight: 600;
-          transition: background-color 0.3s ease;
-        }
-
-        &Btn:hover {
-          color: $text-color;
-          background-color: $primary-color;
-        }
-
         @media (max-width: $breakpoint-md) {
           @include font-size($font-size-base);
           max-width: rem(220);

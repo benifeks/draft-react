@@ -7,10 +7,12 @@ const Projects = () => {
   return (
     <section className={styles.projects}>
       <nav className={styles.projectsNav}>
-        <NavLink to="/projects">🃏 Projects</NavLink>
-        <NavLink to="blackjack">🃏 Blackjack</NavLink>
-        <NavLink to="table">📊 Table</NavLink>
-        <NavLink to="quicknotes">📝 QuickNotes</NavLink>
+        <NavLink to="/projects">🃏 Проекты</NavLink>
+        <NavLink to="blackjack">
+          ♠️ <span lang="en">Blackjack</span>
+        </NavLink>
+        <NavLink to="table">📊 Таблица</NavLink>
+        <NavLink to="quicknotes">📝 Заметки</NavLink>
       </nav>
 
       <div className={styles.projectsContainer}>
